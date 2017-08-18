@@ -98,23 +98,19 @@ Template.ticketPanel.events({
 });
 
 function isValid(){
-  return $('#topic').val().length > 0 &&
-         $('#location').val().length > 0 &&
-         $('#contact').val().length > 0
+  return $('#topic').val().length > 0
 }
 
 function getTicket(){
   return {
-    topic: $('#topic').val(),
-    location: $('#location').val(),
-    contact: $('#contact').val()
+    topic: $('#topic').val()
   }
 }
 
 function createTicket(){
   if (isValid()){
     var ticket = getTicket();
-    Meteor.call('createTicket', ticket.topic, ticket.location, ticket.contact);
+    Meteor.call('createTicket', ticket.topic);
   }
 }
 
