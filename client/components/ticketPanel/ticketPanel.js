@@ -110,7 +110,7 @@ function getTicket(){
 function createTicket(){
   if (isValid()){
     var ticket = getTicket();
-    ticket.contact = Meteor.user().profile.phone
+    ticket.contact = Meteor.user().phone
     Meteor.call('createTicket', ticket.topic);
   }
 }
