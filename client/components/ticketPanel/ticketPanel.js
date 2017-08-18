@@ -103,14 +103,14 @@ function isValid(){
 
 function getTicket(){
   return {
-    topic: $('#topic').val()
+    topic: $('#topic').val(),
+    contact: Meteor.user().profile.phone
   }
 }
 
 function createTicket(){
   if (isValid()){
     var ticket = getTicket();
-    ticket.contact = Meteor.user().phone
     Meteor.call('createTicket', ticket.topic);
   }
 }
