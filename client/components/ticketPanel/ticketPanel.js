@@ -111,7 +111,7 @@ function getTicket(){
 function createTicket(){
   if (isValid()){
     var ticket = getTicket();
-    Meteor.call('createTicket', ticket.topic);
+    Meteor.call('createTicket', ticket.topic, ticket.contact);
   }
 }
 
