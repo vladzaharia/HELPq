@@ -48,7 +48,7 @@
               {{> ticketPanelRating }}
             {{/with}}
 
-          {{else}}
+           {{else}}
             <div class="title">
               <p>
                 <strong>
@@ -57,7 +57,21 @@
               </p>
               {{constant 'TICKET_PANEL_GREETING'}}
             </div>
+            <div class="content">
+              {{constant 'TICKET_PANEL_TOPIC'}}
+              <br>
+              <input id="topic"
+                     type="text"
+                     name="topic"
+                     class="clean"
+                     placeholder="{{constant 'TICKET_PANEL_TOPIC_PLACEHOLDER'}}">
+            </div>
+            <br>
+            <button id="submit" class="primary push disabled fluid button">
+              {{constant 'TICKET_PANEL_HELP'}}
+            </button>
           {{/if}}
+
 
         {{/if}}
 
