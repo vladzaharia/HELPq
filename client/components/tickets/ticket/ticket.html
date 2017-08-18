@@ -20,16 +20,16 @@
 
       <div class="description">
 
-        {{#if topic}}
-          {{topic}}
-        {{else}}
-          something.
-        {{/if}}
-        
-        <br />
+        <p>
+          {{#if topic}}
+            {{topic}}
+          {{else}}
+            something.
+          {{/if}}
+        </p>
         
         {{#if contact}}
-          <a href="https://phslink.zaharia.io/{{contact}}">Skype link</a>
+          <p><a href="https://phslink.zaharia.io/{{contact}}">Skype link</a></p>
         {{/if}}
 
       </div>
