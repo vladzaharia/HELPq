@@ -22,7 +22,7 @@ Meteor.methods({
   setSetting : setSetting
 });
 
-function createTicket(topic, location, contact) {
+function createTicket(topic, contact) {
   // Must be logged in and queue must be open
   if (authorized.user(this.userId) && _settings().queueEnabled) {
     // User can't have more than one
@@ -43,7 +43,7 @@ function createTicket(topic, location, contact) {
       userId: user._id,
       name: _getUserName(user),
       topic: topic,
-      location: location,
+      location: null,
       contact: contact,
       timestamp: Date.now(),
       status: "OPEN",
